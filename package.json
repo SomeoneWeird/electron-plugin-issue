@@ -1,0 +1,28 @@
+{
+  "name": "electron-plugin-issue",
+  "version": "0.0.1",
+  "description": "electron-plugin-issue",
+  "main": "main.js",
+  "scripts": {
+    "build": "npm run clean && npm run pack",
+    "start": "electron main.js",
+    "start-app": "npm run build && open dist/osx/electron-plugin-issue-darwin-x64/electron-plugin-issue.app",
+    "clean": "rm -rf ./dist",
+    "pack": "npm run pack:osx",
+    "pack:osx": "electron-packager . \"electron-plugin-issue\" --out=dist/osx --platform=darwin --arch=x64 --version=0.36.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SomeoneWeird/electron-plugin-issue.git"
+  },
+  "author": "Adam Brady <adam@boxxen.org>",
+  "bugs": {
+    "url": "https://github.com/SomeoneWeird/electron-plugin-issue/issues"
+  },
+  "homepage": "https://github.com/SomeoneWeird/electron-plugin-issue#readme",
+  "dependencies": {
+    "electron-builder": "^2.6.0",
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.5"
+  }
+}
